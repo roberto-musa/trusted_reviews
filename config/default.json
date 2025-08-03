@@ -10,8 +10,13 @@
     "max": 50
   },
   "mysql": {
-    "client": "mysql",
-    "connection": "mysql://trustedreviewdb_user:@api.visitarbus.it:3306/trustedreview_db"
+    "connection": {
+      "host": "DB_HOST",
+      "port": "DB_PORT", 
+      "user": "DB_USER",
+      "password": "DB_PASSWORD",
+      "database": "DB_NAME"
+    }
   },
   "authentication": {
     "entity": "user",
