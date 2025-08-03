@@ -10,6 +10,7 @@
     "max": 50
   },
   "mysql": {
+    "client": "mysql", 
     "connection": {
       "host": "DB_HOST",
       "port": "DB_PORT", 
