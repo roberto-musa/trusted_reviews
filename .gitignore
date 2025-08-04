@@ -119,3 +119,6 @@ dist
 .sqlite
 
 lib/
+
+# Backup files
+.copy.*

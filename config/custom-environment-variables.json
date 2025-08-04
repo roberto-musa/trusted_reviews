@@ -1,9 +1,22 @@
 {
+  "host": "HOSTNAME",
   "port": {
     "__name": "PORT",
     "__format": "number"
   },
-  "host": "HOSTNAME",
+  "mysql": {
+    "client": "DB_CLIENT", 
+    "connection": {
+      "host": "DB_HOST",
+      "user": "DB_USER",
+      "password": "DB_PWD",
+      "database": "DB_NAME",
+      "port": {
+        "__name": "DB_PORT",
+        "__format": "number"
+      }
+    }
+  },
   "authentication": {
     "secret": "FEATHERS_SECRET"
   }

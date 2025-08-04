@@ -1,22 +1,22 @@
 {
-  "host": "localhost",
-  "port": 3030,
+  "host": "HOSTNAME",
+  "port": "PORT",
   "public": "./public/",
   "origins": [
-    "http://localhost:3030"
+    "http://HOSTNAME:PORT"
   ],
   "paginate": {
     "default": 10,
     "max": 50
   },
   "mysql": {
-    "client": "mysql2", 
+    "client": "DB_CLIENT", 
     "connection": {
-      "host": "127.0.0.1",
-      "port": 3306, 
-      "user": "backend_user",
-      "password": "33w+z9k7V",
-      "database": "trustedreview_db"
+      "host": "DB_HOST",
+      "port": "DB_PORT", 
+      "user": "DB_USER",
+      "password": "DB_PWD",
+      "database": "DB_NAME"
     }
   },
   "authentication": {
