@@ -1,6 +1,6 @@
 {
   "host": "HOSTNAME",
-  "port": PORT,
+  "port": "PORT",
   "public": "./public/",
   "origins": [
     "http://localhost:3030"
