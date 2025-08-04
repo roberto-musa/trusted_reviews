@@ -2,7 +2,16 @@
 
 // --- INIZIO MODIFICA: Aggiungi queste importazioni ---
 import { authenticate } from '@feathersjs/authentication'
-import { hashPassword, protect } from '@feathersjs/authentication-local'
+// --- INIZIO DELLA MODIFICA ---
+
+// Modo ERRATO (che causa il problema):
+// import { hashPassword, protect } from '@feathersjs/authentication-local'
+
+// Modo CORRETTO (suggerito dall'errore):
+import local from '@feathersjs/authentication-local'
+const { hashPassword, protect } = local.hooks
+
+// --- FINE DELLA MODIFICA ---
 // --- FINE MODIFICA ---
 
 import { hooks as schemaHooks } from '@feathersjs/schema'
