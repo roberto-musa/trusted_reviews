@@ -1,5 +1,5 @@
 {
-  "host": HOSTNAME,
+  "host": "HOSTNAME",
   "port": PORT,
   "public": "./public/",
   "origins": [
