@@ -127,3 +127,4 @@ knexfile.copy.js
 
 # Environment files
 .env
+local.env
