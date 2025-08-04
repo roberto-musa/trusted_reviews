@@ -1,6 +1,9 @@
 import { users } from './users/users.js'
 import { reviewsBackend } from './reviews-backend/reviews-backend.js'
-import { user } from './users/users.js'
+// src/services/index.js - MODO ERRATO
+// import { user } from './users/users.js'
+// src/services/index.js - MODO CORRETTO
+import { users } from './users/users.js'
 export const services = app => {
   app.configure(users)
 
