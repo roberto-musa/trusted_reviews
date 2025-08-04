@@ -20,7 +20,7 @@ import {
   usersPatchValidator,
   usersQueryValidator,
   usersResolver,
-  usersExternalResolver,
+//  usersExternalResolver,
   usersDataResolver,
   usersPatchResolver,
   usersQueryResolver
@@ -47,7 +47,7 @@ export const users = app => {
       // --- INIZIO MODIFICA: Applica le regole di autenticazione ---
       all: [
         // NOTA: Manteniamo gli hooks esistenti e aggiungiamo i nostri
-        schemaHooks.resolveExternal(usersExternalResolver), 
+        // schemaHooks.resolveExternal(usersExternalResolver), 
         schemaHooks.resolveResult(usersResolver)
       ],
       find: [authenticate('jwt')],
