@@ -6,6 +6,22 @@
 
 This project uses [Feathers](http://feathersjs.com). An open source framework for building APIs and real-time applications.
 
+## Environement Vars
+
+This project uses theese vars:
+- local: node version
+- DB_CLIENT: es. mysql2
+- DB_HOST: es. 127.0.0.1
+- DB_USER
+- DB_PASSWORD
+- DB_NAME
+- DB_PORT: es. 3306
+- NODE_ENV: es. production
+- HOSTNAME: es. localhost
+- PORT: es. 3030
+- UserMail: user Id for authentication
+- UserPwd: password for authentication
+
 ## Getting Started
 
 1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
