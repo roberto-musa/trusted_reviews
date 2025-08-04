@@ -1,75 +1,57 @@
 // For more information about this file see https://dove.feathersjs.com/guides/cli/service.schemas.html
 import { resolve, getValidator, querySyntax } from '@feathersjs/schema'
-import { passwordHash } from '@feathersjs/authentication-local'
 import { dataValidator, queryValidator } from '../../validators.js'
 
 // Main data model schema
-export const userSchema = {
-  $id: 'User',
+export const usersSchema = {
+  $id: 'Users',
   type: 'object',
   additionalProperties: false,
-  required: ['id', 'email'],
+  required: ['id', 'text'],
   properties: {
     id: { type: 'number' },
-    email: { type: 'string' },
-    password: { type: 'string' }
+    text: { type: 'string' }
   }
 }
-export const userValidator = getValidator(userSchema, dataValidator)
-export const userResolver = resolve({})
+export const usersValidator = getValidator(usersSchema, dataValidator)
+export const usersResolver = resolve({})
 
-export const userExternalResolver = resolve({
-  // The password should never be visible externally
-  password: async () => undefined
-})
+export const usersExternalResolver = resolve({})
 
 // Schema for creating new data
-export const userDataSchema = {
-  $id: 'UserData',
+export const usersDataSchema = {
+  $id: 'UsersData',
   type: 'object',
   additionalProperties: false,
-  required: ['email'],
+  required: ['text'],
   properties: {
-    ...userSchema.properties
+    ...usersSchema.properties
   }
 }
-export const userDataValidator = getValidator(userDataSchema, dataValidator)
-export const userDataResolver = resolve({
-  password: passwordHash({ strategy: 'local' })
-})
+export const usersDataValidator = getValidator(usersDataSchema, dataValidator)
+export const usersDataResolver = resolve({})
 
 // Schema for updating existing data
-export const userPatchSchema = {
-  $id: 'UserPatch',
+export const usersPatchSchema = {
+  $id: 'UsersPatch',
   type: 'object',
   additionalProperties: false,
   required: [],
   properties: {
-    ...userSchema.properties
+    ...usersSchema.properties
   }
 }
-export const userPatchValidator = getValidator(userPatchSchema, dataValidator)
-export const userPatchResolver = resolve({
-  password: passwordHash({ strategy: 'local' })
-})
+export const usersPatchValidator = getValidator(usersPatchSchema, dataValidator)
+export const usersPatchResolver = resolve({})
 
 // Schema for allowed query properties
-export const userQuerySchema = {
-  $id: 'UserQuery',
+export const usersQuerySchema = {
+  $id: 'UsersQuery',
   type: 'object',
   additionalProperties: false,
   properties: {
-    ...querySyntax(userSchema.properties)
+    ...querySyntax(usersSchema.properties)
   }
 }
-export const userQueryValidator = getValidator(userQuerySchema, queryValidator)
-export const userQueryResolver = resolve({
-  // If there is a user (e.g. with authentication), they are only allowed to see their own data
-  id: async (value, user, context) => {
-    if (context.params.user) {
-      return context.params.user.id
-    }
-
-    return value
-  }
-})
+export const usersQueryValidator = getValidator(usersQuerySchema, queryValidator)
+export const usersQueryResolver = resolve({})

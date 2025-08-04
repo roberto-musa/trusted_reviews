@@ -5,6 +5,8 @@ export {}
 
 export {}
 
+export {}
+
 /**
  * Returns a  client for the reviews-backend app.
  *
@@ -23,6 +25,8 @@ export const createClient = (connection, authenticationOptions = {}) => {
   client.configure(userClient)
 
   client.configure(reviewsBackendClient)
+
+  client.configure(usersClient)
 
   return client
 }

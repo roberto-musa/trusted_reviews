@@ -1,11 +1,11 @@
-export const userPath = 'users'
+export const usersPath = 'users'
 
-export const userMethods = ['find', 'get', 'create', 'patch', 'remove']
+export const usersMethods = ['find', 'get', 'create', 'patch', 'remove']
 
-export const userClient = client => {
+export const usersClient = client => {
   const connection = client.get('connection')
 
-  client.use(userPath, connection.service(userPath), {
-    methods: userMethods
+  client.use(usersPath, connection.service(usersPath), {
+    methods: usersMethods
   })
 }
