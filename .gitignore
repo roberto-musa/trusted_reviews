@@ -123,3 +123,4 @@ lib/
 # Backup files
 .copy.*
 config/default.copy.json
+knexfile.copy.js
