@@ -1,7 +1,7 @@
 // knexfile.js
 
 // Carica la configurazione delle variabili d'ambiente (importante all'inizio)
-require('dotenv').config();
+// require('dotenv').config();
 
 // For more information about this file see https://dove.feathersjs.com/guides/cli/databases.html
 import { app } from './src/app.js'
