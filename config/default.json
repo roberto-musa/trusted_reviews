@@ -1,9 +1,9 @@
 {
-  "host": "HOSTNAME",
-  "port": "PORT",
+  "host": HOSTNAME,
+  "port": PORT,
   "public": "./public/",
   "origins": [
-    "http://HOSTNAME:PORT"
+    "http://localhost:3030"
   ],
   "paginate": {
     "default": 10,
@@ -26,8 +26,8 @@
       "expiresIn": "1d"
     },
     "local": {
-      "usernameField": "roberto.musa@hotmail.it",
-      "passwordField": "22Ottobre1983!"
+      "usernameField": "UserMail",
+      "passwordField": "UserPwd"
     }
   }
 }

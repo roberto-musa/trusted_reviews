@@ -17,6 +17,10 @@
       }
     }
   },
+  "local": {
+    "usernameField": "UserMail",
+    "passwordField": "UserPwd"
+  },
   "authentication": {
     "secret": "FEATHERS_SECRET"
   }
