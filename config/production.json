@@ -1,5 +1,6 @@
 {
   "mysql": {
+    "client": "DB_CLIENT",
     "connection": {
       "host": "DB_HOST",
       "port": "DB_PORT",
